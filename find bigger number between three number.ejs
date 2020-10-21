@@ -1,0 +1,25 @@
+<!-- Find bigger number between three numbers using angularjs -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <img src="https://angularjs.org/img/AngularJS-large.png" height="50px" weight="50px"/>
+        
+        <h1>Find the biggest number between three numbers: </h1>
+        <div ng-app="">
+            <input type="number" placeholder="Enter an integer" ng-model="a" required>
+            <input type="number" placeholder="Enter an integer" ng-model="b" required>
+            <input type="number" placeholder="Enter an integer" ng-model="c" required>
+            <div ng-if="a>b && a>c">The bigger is: {{ a }}</div>
+            <div ng-if="b>a && b>c">The bigger is: {{ b }}</div>
+            <div ng-if="c>a && c>b">The bigger is: {{ c }}</div>
+            <div ng-if="a==b">Number1 and number2 are equal</div>
+            <div ng-if="a==c">Number1 and number3 are equal</div>
+            <div ng-if="b==c">Number2 and number3 are equal</div>
+            <div ng-if="a==b && b==c && a==c">Three numbers are equal</div>
+        </div>
+    </body>
+</html>
