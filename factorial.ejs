@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            var app = angular.module('myapp',[]);
+            app.controller('find',function($scope){
+                $scope.calculate = function(){
+                    var num = $scope.a;
+                    var i, f = 1;
+                    for(i = num; i>=1; i--){
+                        f = f*i;
+                    }
+                    $scope.result = f;
+                }
+            });
+        </script>
+    </head>
+    <body ng-app="myapp" ng-controller="find">
+        <img src="https://angularjs.org/img/AngularJS-large.png" height="50px" weight="50px"/>
+        <form>
+            <input type="text" ng-model="a" required>
+            <button ng-click="calculate()">Find Factorial</button>
+            {{ "Factorial is : " +result }}
+        </form>
+    </body>
+</html>
