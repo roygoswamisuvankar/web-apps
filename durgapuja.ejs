@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        
+    </head>
+   
+    <body>
+      <center>
+      <h1 class="ml15">
+        <span class="word">Wish</span>
+        <span class="word">You</span>
+        <span class="word">To</span>
+        <span class="word">All</span>
+        <span class="word">Happy</span>
+        <span class="word">Durga</span>
+        <span class="word">Puja</span>
+      </h1>
+    </center>  
+      <style>
+        .ml15 {
+    font-weight: 500;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+      </style>
+      <script>
+        anime.timeline({loop: true})
+.add({
+  targets: '.ml15 .word',
+  scale: [14,1],
+  opacity: [0,1],
+  easing: "easeOutCirc",
+  duration: 800,
+  delay: (el, i) => 800 * i
+}).add({
+  targets: '.ml15',
+  opacity: 0,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
+      </script>
+      
+        <center><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_wzluzewn.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" hover loop></lottie-player></center>
+      
+    </body>
+</html>
